@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Install Lua runtime
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lua5.4
+
+      - name: Validate Lua syntax
+        run: lua5.4 -e "assert(loadfile('lua/lsp/fsl.lua'))"
+
+      - name: Validate plugin runtime files
+        run: |
+          test -f ftdetect/fsl.vim
+          test -f syntax/fsl.vim
