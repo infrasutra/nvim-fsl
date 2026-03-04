@@ -21,13 +21,13 @@ function M.setup(opts)
       default_config = {
         cmd = { opts.cmd or 'fsl', 'lsp', '--stdio' },
         filetypes = { 'fsl' },
-        root_dir = lspconfig.util.root_pattern('.fluxcms.yaml', '.fluxcms.yml', '.git'),
+        root_dir = lspconfig.util.root_pattern('.fsl.yaml', '.fsl.yml', '.fluxcms.yaml', '.fluxcms.yml', '.git'),
         settings = {},
         single_file_support = true,
       },
       docs = {
         description = [[
-FSL Language Server for Flux CMS schemas.
+FSL Language Server for FSL schemas.
 
 Provides diagnostics, completion, hover, and go-to-definition.
 

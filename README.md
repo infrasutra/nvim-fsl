@@ -1,6 +1,11 @@
 # nvim-fsl
 
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
+[![FSL](https://img.shields.io/badge/fsl-github-black)](https://github.com/infrasutra/fsl)
+
 Neovim support for [Flux Schema Language (FSL)](https://github.com/infrasutra/fsl) including syntax highlighting and LSP integration.
+
+Repository: https://github.com/infrasutra/nvim-fsl
 
 ## Installation
 
