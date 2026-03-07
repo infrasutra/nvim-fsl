@@ -28,3 +28,6 @@ jobs:
           test -f after/ftplugin/fsl.vim
           test -f lua/lsp/fsl.lua
           test -f snippets/fsl.lua
+
+      - name: Validate snippet Lua syntax
+        run: lua5.4 -e "assert(loadfile('snippets/fsl.lua'))"

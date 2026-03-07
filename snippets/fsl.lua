@@ -83,7 +83,7 @@ return {
 
   -- Slug field
   s("fslug", {
-    i(1, "slug"), t(": Slug! @unique"),
+    i(1, "slug"), t(": Slug"), i(2, "!"), t(" @unique"),
   }),
 
   -- Array field
