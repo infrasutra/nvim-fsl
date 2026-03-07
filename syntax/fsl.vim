@@ -17,7 +17,7 @@ syn match fslDecorator "@\w\+"
 
 " Comments
 syn match fslComment "//.*$"
-syn region fslBlockComment start="/\*" end="\*/" contains=fslBlockComment
+syn region fslBlockComment start="/\*" end="\*/"
 
 " Strings
 syn region fslString start='"' end='"' contains=fslEscape

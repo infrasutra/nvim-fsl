@@ -123,6 +123,7 @@ Install the CLI:
     local root = detect_workspace_root(0, find_root)
     local validate_cmd = vim.list_extend(vim.deepcopy(cli_cmd), { 'validate', root })
     vim.cmd('botright new')
+    vim.bo.bufhidden = 'wipe'
     vim.fn.termopen(validate_cmd)
   end, { desc = 'Validate all FSL schema files in the workspace' })
 
