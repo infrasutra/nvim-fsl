@@ -20,7 +20,11 @@ jobs:
       - name: Validate Lua syntax
         run: lua5.4 -e "assert(loadfile('lua/lsp/fsl.lua'))"
 
-      - name: Validate plugin runtime files
+      - name: Validate plugin runtime files exist
         run: |
           test -f ftdetect/fsl.vim
           test -f syntax/fsl.vim
+          test -f ftplugin/fsl.vim
+          test -f after/ftplugin/fsl.vim
+          test -f lua/lsp/fsl.lua
+          test -f snippets/fsl.lua
